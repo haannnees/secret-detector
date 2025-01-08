@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/octarinesec/secret-detector/pkg/dataformat"
-	"github.com/octarinesec/secret-detector/pkg/scanner"
-	"github.com/octarinesec/secret-detector/pkg/secrets"
 	"strings"
+
+	"github.com/DefangLabs/secret-detector/pkg/dataformat"
+	"github.com/DefangLabs/secret-detector/pkg/scanner"
+	"github.com/DefangLabs/secret-detector/pkg/secrets"
 )
 
 func printScanOutput(ds []secrets.DetectedSecret, err error) {

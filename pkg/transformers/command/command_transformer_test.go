@@ -1,8 +1,9 @@
 package command
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/transformers/tests"
 	"testing"
+
+	"github.com/DefangLabs/secret-detector/pkg/transformers/tests"
 )
 
 var testCases = []tests.TestCase{

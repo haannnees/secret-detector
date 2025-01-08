@@ -1,8 +1,9 @@
 package jsontransformer
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/transformers/tests"
 	"testing"
+
+	"github.com/DefangLabs/secret-detector/pkg/transformers/tests"
 )
 
 var testCases = []tests.TestCase{
@@ -21,7 +22,7 @@ var testCases = []tests.TestCase{
 	{"value types", `{"s": "a string", "i": 10, "neg": -10, "f": 3.14, "e": 1e3, "b1": true, "b2": false, "u": "\u003a\u0029", "nil": null}`,
 		map[string]string{"s": "a string", "i": "10", "neg": "-10", "f": "3.14", "e": "1000", "b1": "true", "b2": "false", "u": ":)", "nil": "<nil>"}},
 	{"special characters", `{
-"spa ce": "val ue", 
+"spa ce": "val ue",
 "ta\tb": "val\tue",
 "new\nline": "val\nue",
 "sla/sh": "val/ue",
@@ -47,7 +48,7 @@ var testCases = []tests.TestCase{
 		map[string]string{"a.1.a": "v1", "a.2": "v2", "b": "v3"}},
 	{"arrays", `
 {
-  "arr1": [1,2,3], 
+  "arr1": [1,2,3],
   "arr2": [
     {"1": {"a": "v1"} },
     {"2": "v2"},

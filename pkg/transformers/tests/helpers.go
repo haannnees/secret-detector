@@ -3,8 +3,8 @@ package tests
 import (
 	"testing"
 
+	"github.com/DefangLabs/secret-detector/pkg/secrets"
 	"github.com/stretchr/testify/assert"
-	"github.com/octarinesec/secret-detector/pkg/secrets"
 )
 
 type TestCase struct {

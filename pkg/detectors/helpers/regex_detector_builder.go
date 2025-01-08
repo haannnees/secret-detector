@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/secrets"
+	"github.com/DefangLabs/secret-detector/pkg/secrets"
 )
 
 type RegexDetectorBuilder struct {

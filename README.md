@@ -9,7 +9,7 @@ It is meant to be imported in other projects and uses as a Secret Detection Engi
 In order to use it in another project, get the go module:
 
 ```shell
-go get github.com/octarinesec/secret-detector
+go get github.com/DefangLabs/secret-detector
 ```
 
 Then you can import it in your Go code and use it:
@@ -18,13 +18,13 @@ Then you can import it in your Go code and use it:
 import (
     "fmt"
     "io"
-    "github.com/octarinesec/secret-detector/pkg/scanner"
+    "github.com/DefangLabs/secret-detector/pkg/scanner"
 )
 
 func main() {
     scanner := scanner.NewDefaultScanner()
-    
-    // scanner input can be a file path 
+
+    // scanner input can be a file path
     detectedSecrets, err := scanner.ScanFile("path/to/file")
     // or an io.Reader
     var in io.Reader
@@ -32,11 +32,11 @@ func main() {
     // or just a simple string
     var secrets string
     detectedSecrets, err := scanner.Scan(secrets)
-	
+
     // print the results
     for secret := range detectedSecrets {
         fmt.Printf("Secret of type '%s' found in '%s'\n", d.Type, d.Key)
-    }  
+    }
 }
 ```
 
@@ -54,7 +54,7 @@ type Transformer interface {
     SupportFiles() bool
 }
 ```
-Transformer receives a `string` input and tries to convert it into a key-value `map[string]string`. Each transformer supports a different data structure, like `yamltransformer`, `jsontransformer`, etc. 
+Transformer receives a `string` input and tries to convert it into a key-value `map[string]string`. Each transformer supports a different data structure, like `yamltransformer`, `jsontransformer`, etc.
 
 ### Detector
 ```go
@@ -73,14 +73,14 @@ For example, `keyword.detector` checks for keywords like `password` or `api_key`
 ## Load Scanner using a config file
 ```go
 import (
-    "github.com/octarinesec/secret-detector/pkg/scanner"
+    "github.com/DefangLabs/secret-detector/pkg/scanner"
 )
 
 func main() {
     // load config from json
     jsonCfg := `{
-        "transformers": ["json", "yaml"], 
-        "detectors": ["github", "jwt", "keyword"], 
+        "transformers": ["json", "yaml"],
+        "detectors": ["github", "jwt", "keyword"],
         "threshold_in_bytes": 1000000}`
     cfg, err := scanner.NewConfigFromJson(strings.NewReader(jsonCfg))
     // or from yaml
@@ -89,11 +89,11 @@ func main() {
         " - yaml\n" +
         "detectors:\n" +
         " - github\n" +
-        " - jwt\n" + 
-        " - keyword\n" + 
+        " - jwt\n" +
+        " - keyword\n" +
         "threshold_in_bytes: 1000000"
     cfg, err := scanner.NewConfigFromYaml(strings.NewReader(yamlCfg))
-	
+
 	// create a scanner
     scanner := scanner.NewScannerFromConfig(cfg)
 }

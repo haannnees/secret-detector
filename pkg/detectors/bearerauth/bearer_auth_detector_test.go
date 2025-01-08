@@ -1,8 +1,9 @@
 package bearerauth
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/detectors/tests"
 	"testing"
+
+	"github.com/DefangLabs/secret-detector/pkg/detectors/tests"
 )
 
 var testCases = []tests.TestCase{

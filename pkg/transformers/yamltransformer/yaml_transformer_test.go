@@ -1,8 +1,9 @@
 package yamltransformer
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/transformers/tests"
 	"testing"
+
+	"github.com/DefangLabs/secret-detector/pkg/transformers/tests"
 )
 
 var testCases = []tests.TestCase{
@@ -32,10 +33,10 @@ s p a c e s: y e s
 sla/sh: ye/s
 d.o.t.s: y.e.s
 sepa:rator: yes
-multiline1: 
+multiline1:
   hello
   world!
-multiline2: | 
+multiline2: |
   hello
   world!`,
 		map[string]string{

@@ -1,8 +1,9 @@
 package initransformer
 
 import (
-	"github.com/octarinesec/secret-detector/pkg/transformers/tests"
 	"testing"
+
+	"github.com/DefangLabs/secret-detector/pkg/transformers/tests"
 )
 
 var testCases = []tests.TestCase{
@@ -25,14 +26,14 @@ key3: value3`,
 		`
 [empty values]
 key1=
-key2 = 
-key3: 
+key2 =
+key3:
 
 [numbers]
-int1 = 1   
-int2=-2		
+int1 = 1
+int2=-2
 float1: 1.234
-float2 = 2.30	
+float2 = 2.30
 
 [bool]
 bool0: false
@@ -54,7 +55,7 @@ are allowed = yes they are
 [$pe.ci@l-#&*?]
 can we? = yes, we can!
 what/about\slashes=y/e\s
-d.o.t.s = ... 
+d.o.t.s = ...
 ["quotes"]
 "double" = "ignored in key & value"
 'single' = 'ignored for value'`,
@@ -67,7 +68,7 @@ d.o.t.s = ...
 			`"quotes".'single'`:                "ignored for value"}},
 	{"comments are ignored",
 		`
-# comment for section1 
+# comment for section1
 [section1]
 key1=value1 ; inline comment for key1
 ; comment for section2
@@ -79,12 +80,12 @@ key2=value2`,
 	{"nested keys and sections",
 		`
 [section1]
-key1 = 
+key1 =
   A = 1/1.A
   B = 1/1.B
 [section1.sub1]
 A = 1.1/A
-B = 
+B =
   a = 1.1/B.a
   b = 1.1/B.b
 `,
@@ -102,7 +103,7 @@ multi = ln 1
   ln 3
 
 [section]
-multi = 
+multi =
   this is a
   long text
 `,
