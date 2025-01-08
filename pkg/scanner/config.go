@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/DefangLabs/secret-detector/pkg/transformers/command"
-
 	"gopkg.in/yaml.v3"
 
 	"github.com/DefangLabs/secret-detector/pkg/detectors/artifactory"
@@ -62,7 +60,7 @@ func NewConfigWithDefaults() Config {
 			yamltransformer.Name,
 			xmltransformer.Name,
 			initransformer.Name,
-			command.Name,
+			// command.Name,
 		},
 		Detectors: []string{
 			artifactory.Name,
