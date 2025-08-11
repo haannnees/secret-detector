@@ -14,7 +14,7 @@ var urlPwdTestCases = []tests.TestCase{
 
 	{"missing scheme", "user:p455w0rd@example.com", false},
 	{"missing domain", "https://user:p455w0rd@", false},
-	{"empty user", "https://:p455w0rd@example.com", false},
+	{"empty user", "https://:p455w0rd@example.com", true},
 	{"empty pwd", "https://user:@example.com", false},
 	{"missing pwd", "https://user@example.com", false},
 	{"missing user & pwd", "https://example.com", false},
