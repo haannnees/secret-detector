@@ -14,7 +14,7 @@ const (
 
 	// urlPasswordRegex represents a regex that matches urls with user & password.
 	// e.g. scheme://user:pass@domain.com/
-	urlPasswordRegex = `[a-z][a-z0-9+.-]+://[^:\s]+:[^@:\s]+@[^\s'"\];]+`
+	urlPasswordRegex = `[a-z][a-z0-9+.-]+://[^:\s]*:[^@:\s]+@[^\s'"\];]+`
 )
 
 func init() {
@@ -37,7 +37,6 @@ func isUrlWithPassword(_, s string) bool {
 		return false
 	}
 
-	user := u.User.Username()
 	pwd, _ := u.User.Password()
-	return user != "" && pwd != "" && !strings.HasPrefix(pwd, "$")
+	return pwd != "" && !strings.HasPrefix(pwd, "$")
 }
