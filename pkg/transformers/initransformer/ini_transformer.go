@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DefangLabs/secret-detector/pkg/dataformat"
+	"github.com/haannnees/secret-detector/pkg/dataformat"
 
 	"gopkg.in/ini.v1"
 
-	"github.com/DefangLabs/secret-detector/pkg/secrets"
+	"github.com/haannnees/secret-detector/pkg/secrets"
 )
 
 const (

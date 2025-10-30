@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/DefangLabs/secret-detector/pkg/secrets"
+	"github.com/haannnees/secret-detector/pkg/secrets"
 	"github.com/stretchr/testify/assert"
 )
 

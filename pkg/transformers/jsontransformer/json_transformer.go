@@ -3,10 +3,10 @@ package jsontransformer
 import (
 	"encoding/json"
 
-	"github.com/DefangLabs/secret-detector/pkg/dataformat"
+	"github.com/haannnees/secret-detector/pkg/dataformat"
 
-	"github.com/DefangLabs/secret-detector/pkg/secrets"
-	"github.com/DefangLabs/secret-detector/pkg/transformers/helpers"
+	"github.com/haannnees/secret-detector/pkg/secrets"
+	"github.com/haannnees/secret-detector/pkg/transformers/helpers"
 )
 
 const (

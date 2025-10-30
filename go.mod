@@ -1,6 +1,6 @@
-module github.com/DefangLabs/secret-detector
+module github.com/haannnees/secret-detector
 
-go 1.21
+go 1.25.3
 
 require (
 	github.com/golang-jwt/jwt/v5 v5.2.2

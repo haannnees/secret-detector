@@ -3,7 +3,7 @@ package secrets
 import (
 	"io"
 
-	"github.com/DefangLabs/secret-detector/pkg/dataformat"
+	"github.com/haannnees/secret-detector/pkg/dataformat"
 )
 
 type Detector interface {
