@@ -1,12 +1,11 @@
 package scanner
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"os"
 	"strings"
-
-	"github.com/hashicorp/go-multierror"
 
 	"github.com/DefangLabs/secret-detector/pkg/dataformat"
 	"github.com/DefangLabs/secret-detector/pkg/secrets"
@@ -188,7 +187,7 @@ func (s *scanner) scanString(in string) (res []secrets.DetectedSecret, err error
 		// notice that a detector can return both results and an error
 		detectedSecrets, currErr := detector.Scan(in)
 		if currErr != nil {
-			err = multierror.Append(currErr)
+			err = errors.Join(err, currErr)
 		}
 		res = append(res, detectedSecrets...)
 
@@ -205,7 +204,7 @@ func (s *scanner) scanMap(keyValueMap map[string]string) (res []secrets.Detected
 		// notice that a detector can return both results and an error
 		detectedSecrets, currErr := detector.ScanMap(keyValueMap)
 		if currErr != nil {
-			err = multierror.Append(currErr)
+			err = errors.Join(err, currErr)
 		}
 		res = append(res, detectedSecrets...)
 	}
