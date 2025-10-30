@@ -1,6 +1,7 @@
 # Detect secrets
 
-This project it a rewrite of <https://github.com/Yelp/detect-secrets> in Go.
+This project is a rewrite of <https://github.com/Yelp/detect-secrets> in Go.
+This project is a fork of <[https://github.com/Yelp/detect-secrets](https://github.com/DefangLabs/secret-detector).
 
 It is meant to be imported in other projects and uses as a Secret Detection Engine - given a piece of data, determine whether data contains a secret.
 
