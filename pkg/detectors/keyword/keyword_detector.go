@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/DefangLabs/secret-detector/pkg/detectors/generic"
+	"github.com/haannnees/secret-detector/pkg/detectors/generic"
 
-	"github.com/DefangLabs/secret-detector/pkg/detectors/helpers"
-	"github.com/DefangLabs/secret-detector/pkg/secrets"
+	"github.com/haannnees/secret-detector/pkg/detectors/helpers"
+	"github.com/haannnees/secret-detector/pkg/secrets"
 )
 
 const (

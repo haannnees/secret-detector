@@ -3,7 +3,7 @@ package yamltransformer
 import (
 	"testing"
 
-	"github.com/DefangLabs/secret-detector/pkg/transformers/tests"
+	"github.com/haannnees/secret-detector/pkg/transformers/tests"
 )
 
 var testCases = []tests.TestCase{

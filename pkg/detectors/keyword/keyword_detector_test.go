@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DefangLabs/secret-detector/pkg/detectors/tests"
+	"github.com/haannnees/secret-detector/pkg/detectors/tests"
 )
 
 var testCases = []tests.TestCase{

@@ -3,7 +3,7 @@ package aws
 import (
 	"testing"
 
-	"github.com/DefangLabs/secret-detector/pkg/detectors/tests"
+	"github.com/haannnees/secret-detector/pkg/detectors/tests"
 )
 
 var clientIdTestCases = []tests.TestCase{
