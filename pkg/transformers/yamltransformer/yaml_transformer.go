@@ -2,7 +2,7 @@ package yamltransformer
 
 import (
 	"github.com/haannnees/secret-detector/pkg/dataformat"
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v3"
 
 	"github.com/haannnees/secret-detector/pkg/secrets"
 	"github.com/haannnees/secret-detector/pkg/transformers/helpers"
