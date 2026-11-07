@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"io"
 
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v3"
 
 	"github.com/haannnees/secret-detector/pkg/detectors/artifactory"
 	"github.com/haannnees/secret-detector/pkg/detectors/aws"

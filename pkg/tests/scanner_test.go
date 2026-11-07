@@ -31,8 +31,8 @@ import (
 	"github.com/haannnees/secret-detector/pkg/scanner"
 	"github.com/haannnees/secret-detector/pkg/secrets"
 	"github.com/stretchr/testify/assert"
+	"go.yaml.in/yaml/v3"
 	"gopkg.in/ini.v1"
-	"gopkg.in/yaml.v3"
 )
 
 const (
